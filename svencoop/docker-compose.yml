@@ -1,0 +1,7 @@
+version: '2'
+services:
+  svenserver:
+    image: svenserver
+    ports:
+      - "27015:27015"
+      - "27015:27015/udp"
