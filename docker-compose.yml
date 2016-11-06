@@ -5,6 +5,11 @@ services:
     ports:
       - "27015:27015"
       - "27015:27015/udp"
+  hl2dmserver:
+    image: mars:5000/hl2dmserver
+    ports:
+      - "27016:27015"
+      - "27016:27015/udp"
   ui-for-docker:
     image: uifd/ui-for-docker
     ports:
