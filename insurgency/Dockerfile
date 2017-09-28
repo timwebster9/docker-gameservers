@@ -30,5 +30,11 @@ RUN bash linuxgsm.sh insserver\
 
 COPY wrapper.sh /home/insserver/
 
+USER root
+COPY insserver.cfg /home/insserver/serverfiles/insurgency/cfg/
+RUN chown -R insserver:insserver /home/insserver/serverfiles/insurgency/cfg/insserver.cfg
+
+USER insserver
+
 ENTRYPOINT ["/bin/bash"]
 CMD ["wrapper.sh"]
