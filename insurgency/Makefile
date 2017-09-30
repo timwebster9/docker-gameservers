@@ -6,6 +6,8 @@ build:
 push:
 	docker push mars:5000/timw/insurgency-server
 
+all: build push
+
 up:
 	docker-compose up -d && docker-compose logs -f
 
